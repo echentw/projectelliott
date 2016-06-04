@@ -50,14 +50,12 @@ router.post('/:problem', function(req, res) {
           User.update({ 'username': 'Elliott' },
                       { $push: { 'problems': Number(index) } },
                       function(err) {
-            res.render('problem', { title: TITLE,
-                                    hasSolved: hasSolved,
+            res.render('correct', { title: TITLE,
                                     index: index });
           });
         } else {
           // if the problem has been solved already...
-          res.render('problem', { title: TITLE,
-                                  hasSolved: hasSolved,
+          res.render('correct', { title: TITLE,
                                   index: index });
         }
       });
