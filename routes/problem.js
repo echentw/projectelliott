@@ -61,7 +61,8 @@ router.post('/:problem', function(req, res) {
       });
     } else {
       // handle incorrect answer
-      res.render('incorrect', { title: TITLE });
+      res.render('incorrect', { title: TITLE,
+                                index: index });
     }
   } else {
     res.render('error');
