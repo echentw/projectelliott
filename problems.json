@@ -1,0 +1,16 @@
+{
+  "1": {
+    "problem": "What is the sum of 1 + 2 + 3 + ... + 123?",
+    "answer": 7626
+  },
+
+  "2": {
+    "problem": "What is the 1045-th prime number? (2 is the first prime number, 3 is the second prime number, etc.)",
+    "answer": 8329
+  },
+
+  "3": {
+    "problem": "What is the sum of the first 100 prime numbers?",
+    "answer": 24133
+  }
+}
