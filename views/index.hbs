@@ -5,7 +5,8 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>This is the home page</h1>
+    <h1>{{title}}</h1>
+    <h2>Problems</h2>
       {{#each progress}}
         <a href="/problem/{{this.number}}">Problem {{this.number}}</a>
         {{#if this.solved}}

@@ -5,6 +5,21 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>This is the progress page.</h1>
+    <h1>{{title}}</h1>
+    <h2>Progress</h2>
+      {{#if oneSolved}}
+        <p>You have solved {{numSolved}} problem.</p>
+      {{else}}
+        <p>You have solved {{numSolved}} problems.</p>
+      {{/if}}
+      {{#each progress}}
+        <a href="/problem/{{this.number}}">Problem {{this.number}}</a>
+        {{#if this.solved}}
+          Solved
+        {{else}}
+          Not Solved
+        {{/if}}
+        <br>
+      {{/each}}
   </body>
 </html>
