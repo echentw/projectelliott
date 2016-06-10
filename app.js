@@ -4,7 +4,6 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var exphbs = require('express-handlebars');
 var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
@@ -15,8 +14,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.engine('.hbs', exphbs({extname: '.hbs'}));
-app.set('view engine', '.hbs');
+app.set('view engine', 'ejs');
 
 // database setup
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pe');

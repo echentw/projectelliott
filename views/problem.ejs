@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <% include partials/_navbar.html %>
+
+    <h1>Problem <%= index %></h1>
+
+    <% if (hasSolved) { %>
+      <p>You have solved this problem!</p>
+    <% } else { %>
+      <p>You have not solved this problem yet.</p>
+    <% } %>
+
+    <p><%= problemStatement %></p>
+
+    <form action="/problem/<%= index %>" method="post">
+      Your answer:<br>
+      <input type="text" name="submittedAnswer"><br>
+    </form>
+
+    <a href="/">Back</a>
+  </body>
+</html>

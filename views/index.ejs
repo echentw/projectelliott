@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <% include partials/_navbar.html %>
+
+    <h2>Problems</h2>
+      <% for (var i = 0; i < progress.length; ++i) { %>
+        <a href="/problem/<%= progress[i].number %>">Problem <%= progress[i].number %></a>
+        <% if (progress[i].solved) { %>
+          Solved
+        <% } else { %>
+          Not Solved
+        <% } %>
+        <br>
+      <% } %>
+  </body>
+</html>
