@@ -5,12 +5,12 @@
   },
 
   "2": {
-    "problem": "What is the 1045-th prime number? (2 is the first prime number, 3 is the second prime number, etc.)",
-    "answer": 8329
+    "problem": "What is the sum of the digits of 1 * 2 * 3 * ... * 9293!?",
+    "answer": 136890
   },
 
   "3": {
-    "problem": "What is the sum of the first 100 prime numbers?",
-    "answer": 24133
+    "problem": "The N-th triangular number is 1 + 2 + ... + N. For example, the first triangular number is 1, and the second triangular number is 1 + 2 = 3. What is the smallest triangular number that is larger than 20,000?",
+    "answer": 20100
   }
 }
