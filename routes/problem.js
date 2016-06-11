@@ -45,6 +45,7 @@ router.post('/:problem', function(req, res) {
         var hasSolved = (user.problems.indexOf(Number(index)) != -1);
 
         if (!hasSolved) {
+          console.log("solved a new problem! Problem " + index);
           // if problem hasn't been solved yet, append it to the user array
           User.update({ 'username': 'Elliott' },
                       { $push: { 'problems': Number(index) } },
@@ -53,12 +54,14 @@ router.post('/:problem', function(req, res) {
                                     index: index });
           });
         } else {
+          console.log("resubmitted a correct answer for problem " + index);
           // if the problem has been solved already...
           res.render('correct', { title: TITLE,
                                   index: index });
         }
       });
     } else {
+      console.log("submitted an incorrect answer for problem " + index);
       // handle incorrect answer
       res.render('incorrect', { title: TITLE,
                                 index: index });
