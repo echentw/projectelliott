@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+.solved {
+  color: #00cc00;
+}
+
+.not-solved {
+  color: #595959;
+}

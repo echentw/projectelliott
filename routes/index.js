@@ -12,18 +12,21 @@ router.get('/', function(req, res) {
 
   User.findOne({ 'username': 'Elliott' }, function(err, user) {
     var progress = [];
-    var counter = 1;
+    var counter = 0;
+    var numSolved = 0;
     for (index in problems) {
+      ++counter;
       if (user.problems.indexOf(Number(index)) != -1) {
         progress.push({ number: counter, solved: true });
+        ++numSolved;
       } else {
         progress.push({ number: counter, solved: false });
       }
-      ++counter;
     }
 
     res.render('index', { title: 'ProjectElliott',
-                          progress: progress });
+                          progress: progress,
+                          numSolved: numSolved });
   });
 });
 

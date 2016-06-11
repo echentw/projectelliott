@@ -8,19 +8,31 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
+    <div class="container">
+      <h1><%= title %></h1>
 
-    <% include partials/navbar.html %>
+      <p>You have solved <%= numSolved %> problems.</p>
 
-    <h2>Problems</h2>
-      <% for (var i = 0; i < progress.length; ++i) { %>
-        <a href="/problem/<%= progress[i].number %>">Problem <%= progress[i].number %></a>
-        <% if (progress[i].solved) { %>
-          Solved
-        <% } else { %>
-          Not Solved
-        <% } %>
-        <br>
-      <% } %>
+      <table class="table table-striped">
+        <thead>
+          <th>Problem</th>
+          <th>Solved?</th>
+        </thead>
+
+        <tbody>
+          <% for (var i = 0; i < progress.length; ++i) { %>
+            <tr>
+              <td><a href="/problem/<%= progress[i].number %>">Problem <%= progress[i].number %></a></td>
+              <% if (progress[i].solved) { %>
+                <td><div class="solved">Solved</div></td>
+              <% } else { %>
+                <td><div class="not-solved">Not Solved</div></td>
+              <% } %>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+    </div>
   </body>
 </html>
