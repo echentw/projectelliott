@@ -5,7 +5,7 @@
   },
 
   "2": {
-    "problem": "What is the sum of the digits of 1 * 2 * 3 * ... * 9293!?",
+    "problem": "What is the sum of the digits of 1 * 2 * 3 * ... * 9293?",
     "answer": 136890
   },
 
