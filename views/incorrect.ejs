@@ -8,10 +8,20 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <% include partials/navbar.html %>
+    <div class="container">
 
-    <h1>Uh oh...</h1>
-    <p>The answer you submitted was incorrect.</p>
-    <a href='/problem/<%= index %>'>Back to Problem <%= index %></a>
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h1>Uh oh...!</h1>
+        </div>
+
+        <div class="panel-body">
+          <p>The answer you submitted was incorrect.</p>
+        </div>
+      </div>
+
+      <a href='/problem/<%= index %>'>Back to Problem <%= index %></a>
+
+    </div>
   </body>
 </html>

@@ -8,23 +8,36 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <% include partials/navbar.html %>
+    <div class="container">
+      <% if (hasSolved) { %>
+        <div class="panel panel-success">
+      <% } else { %>
+        <div class="panel panel-info">
+      <% } %>
 
-    <h1>Problem <%= index %></h1>
+        <div class="panel-heading">
+          <h1>Problem <%= index %></h1>
+            <% if (hasSolved) { %>
+              <div class="solved">You have solved this problem!</div>
+            <% } else { %>
+              <div class="not-solved">You have not solved this problem yet.</div>
+            <% } %>
+        </div>
 
-    <% if (hasSolved) { %>
-      <p>You have solved this problem!</p>
-    <% } else { %>
-      <p>You have not solved this problem yet.</p>
-    <% } %>
+        <div class="panel-body">
+          <p><%= problemStatement %></p>
+        </div>
+      </div>
 
-    <p><%= problemStatement %></p>
+      <form class="form-inline form-submit" action="/problem/<%= index %>" method="post">
+        <div class="form-group">
+          <input type="text" class="form-control" name="submittedAnswer" placeholder="Your answer">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
 
-    <form action="/problem/<%= index %>" method="post">
-      Your answer:<br>
-      <input type="text" name="submittedAnswer"><br>
-    </form>
+      <a class="back-link" href="/">Back</a>
 
-    <a href="/">Back</a>
+    </div>
   </body>
 </html>
