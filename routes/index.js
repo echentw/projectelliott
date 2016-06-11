@@ -1,9 +1,8 @@
 var express = require('express');
 var fs = require('fs');
-var schemas = require('../models/schemas');
 var router = express.Router();
 
-var User = schemas.User;
+var User = require('../models/user').User;
 
 /*
  * Check if Elliott is in the DB.
@@ -12,7 +11,6 @@ var User = schemas.User;
 checkDB = function(username, cb) {
   User.findOne({ 'username': username }, function(err, user) {
     if (!user) {
-      console.log("First time user! Creating user.");
       var user = new User({
         username: 'Elliott',
         problems: []
@@ -21,7 +19,6 @@ checkDB = function(username, cb) {
         cb();
       });
     } else {
-      console.log("Elliott has already been created!");
       cb();
     }
   });

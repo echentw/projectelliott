@@ -1,9 +1,8 @@
 var express = require('express');
 var fs = require('fs');
-var schemas = require('../models/schemas');
 var router = express.Router();
 
-var User = schemas.User;
+var User = require('../models/user').User;
 
 /* GET progress page */
 router.get('/', function(req, res) {
