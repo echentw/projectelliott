@@ -10,17 +10,27 @@
   },
 
   "3": {
-    "problem": "What is the sum of the digits of 1 * 2 * 3 * ... * 9293?",
-    "answer": 136890
+    "problem": "Donnie the Dinosaur is very hungry and needs to eat! However, every time he eats, he gets a little bigger, and needs to eat even more the next day. In particular, if he eats n muffins one day, then he needs to eat 2*n-1 muffins the next day. If Donnie eats 3 muffins today (the first day), then how many muffins will he have to eat on the 30-th day?",
+    "answer": 1073741825
   },
 
   "4": {
+    "problem": "Dorothy the Dinosaur is also very thirsty and needs to drink! However, every time she drinks, her bladder gets a little bigger, and needs to drink even more the next day. If she drinks m cups of milk on the day n, then she needs to drink (m + 2*n) cups of milk on the next day! If she drinks 3 cups of milk on day 1, then on day 2, she needs to drink 3 + 1 = 4 cups of milk. How many cups of milk will she need to drink on day 30?",
+    "answer": 873
+  },
+
+  "5": {
     "problem": "The N-th triangular number is 1 + 2 + ... + N. For example, the first triangular number is 1, and the second triangular number is 1 + 2 = 3. What is the smallest triangular number that is larger than 20,000?",
     "answer": 20100
   },
 
-  "5": {
-    "problem": "The Ribonacci sequence is 3, 4, 7, 11, 18, 29, ..., where the each number of the sequence is the sum of the previous two. The first three Ribonacci numbers are 3, 4, and 7. What is the 10,000-th Ribonacci number (mod 1357913579)?",
+  "6": {
+    "problem": "What is the sum of the digits of 1 * 2 * 3 * ... * 9293?",
+    "answer": 136890
+  },
+
+  "7": {
+    "problem": "The Ribonacci sequence is 3, 4, 7, 11, 18, 29, ..., where the each number of the sequence is the sum of the previous two. The first three Ribonacci numbers are 3, 4, and 7. What is the 10,000-th Ribonacci number (mod 1,357,913,579)?",
     "answer": 1022202930
   }
 }
